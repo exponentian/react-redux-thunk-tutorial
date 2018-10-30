@@ -7,7 +7,7 @@
 #### Objectives
 - Understanding of RESTful API
 - Implimenting basic four [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations
-- Differences between Redux-thunk and Redux-saga
+- Differences between [Redux-thunk](https://github.com/reduxjs/redux-thunk) and [Redux-saga](https://github.com/redux-saga/redux-saga)
 
 This tutorial consists of two parts: 
 - **Part One:** [React with Redux-thunk](https://github.com/exponentian/react-redux-thunk-tutorial)
