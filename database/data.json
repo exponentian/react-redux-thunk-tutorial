@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "ffef07f1-1beb-4b94-bf5e-57ef7ca43942",
+      "text": "csc108 - midterm",
+      "completed": false
+    },
+    {
+      "id": "78157bce-22b6-4a08-b8e9-0c5fddd7fc0f",
+      "text": "phy100 - quiz2",
+      "completed": true
+    },
+    {
+      "id": "a32c6cbb-fe9c-40b2-9d6f-dce70bcc22a3",
+      "text": "mat137 - a2",
+      "completed": true
+    }
+  ]
+}
