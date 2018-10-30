@@ -11,7 +11,7 @@
 
 This tutorial consists of two parts: 
 - **Part One:** [React with Redux-thunk](https://github.com/exponentian/react-redux-thunk-tutorial)
-- **Part Two:** [React with Redux-thunk](https://github.com/exponentian/react-redux-saga-tutorial)
+- **Part Two:** [React with Redux-saga](https://github.com/exponentian/react-redux-saga-tutorial)
 
 Target audiences:
 - Beginners of frontend web development
