@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 class TodoEdit extends React.Component {
 
@@ -37,5 +39,14 @@ class TodoEdit extends React.Component {
     );
   }
 }
+
+
+TodoEdit.propTypes = {
+  history: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  updateTodo: PropTypes.func.isRequired
+};
+
 
 export default withRouter(TodoEdit);

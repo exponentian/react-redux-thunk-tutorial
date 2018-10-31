@@ -1,6 +1,12 @@
 import React from 'react';
 import { withRouter, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
+import Header from './Header';
+import TodoList from '../components/TodoList';
+import TodoDetail from '../components/TodoDetail';
+import TodoEdit from '../components/TodoEdit';
 
 import { 
   addTodo,
@@ -9,10 +15,6 @@ import {
   updateTodo
 } from '../actions/todos';
 
-import Header from './Header';
-import TodoList from '../components/TodoList';
-import TodoDetail from '../components/TodoDetail';
-import TodoEdit from '../components/TodoEdit';
 
 class App extends React.Component {
 
@@ -74,6 +76,16 @@ class App extends React.Component {
 const mapStateToProps = state => ({
   todos: state.todos
 });
+
+
+App.propTypes = {
+  todos: PropTypes.shape({
+    requesting: PropTypes.bool.isRequired,
+    isFetched: PropTypes.bool.isRequired,
+    data: PropTypes.object.isRequired,
+    error: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default withRouter( connect(mapStateToProps, { 
   addTodo,

@@ -40,17 +40,22 @@ $ sudo npm install -g json-server
 $ git clone https://github.com/exponentian/react-redux-thunk-tutorial.git
 ```
 
-3. Install npm packages
+3. Go to the folder
+```
+$ cd react-redux-thunk-tutorial
+```
+
+4. Install npm packages
 ```
 $ npm install
 ```
 
-4. json-server starts
+5. json-server starts
 ```
 $ json-server --watch ./database/data.json --port 3004
 ```
 
-5. Start
+6. Start
 ```
 $ npm start
 ```

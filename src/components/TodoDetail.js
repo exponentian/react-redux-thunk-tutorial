@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 
 const TodoDetail = ({ history, match, data }) => {
   const todo = data.byId[match.params.id];
@@ -20,5 +20,13 @@ const TodoDetail = ({ history, match, data }) => {
     </div>
   )
 }
+
+
+TodoDetail.propTypes = {
+  history: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
+};
+
 
 export default withRouter(TodoDetail);

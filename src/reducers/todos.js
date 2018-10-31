@@ -1,8 +1,8 @@
 const initialState = {
   requesting: false,
   isFetched: false,
-  data: [],
-  error: null
+  data: {},
+  error: ''
 }
 
 // preprocessing data

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 const Todo = ({ num, childProps }) => {
   const { todo, deleteTodo, updateCompleted } = childProps;
@@ -19,5 +21,15 @@ const Todo = ({ num, childProps }) => {
     </tr>
   )
 }
+
+Todo.propTypes = {
+  num: PropTypes.number.isRequired,
+  childProps: PropTypes.shape({
+    todo: PropTypes.object.isRequired,
+    deleteTodo: PropTypes.func.isRequired,
+    updateCompleted: PropTypes.func.isRequired
+  }).isRequired
+};
+
 
 export default Todo;
