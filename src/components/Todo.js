@@ -10,13 +10,13 @@ const Todo = ({ num, childProps }) => {
     <tr>
       <td>{ num }</td>
       <td>
-        <input type="checkbox" checked={todo.completed} onChange={() => updateCompleted(todo.id)} />
+        <input type="checkbox" checked={todo.completed} onChange={() => updateCompleted(todo)} />
       </td>
       <td>{ todo.text }</td>
       <td>
         <Link to={`/todos/${todo.id}`}>View</Link>{' '}
         <Link to={`/todos/${todo.id}/edit`}>Edit</Link>{' '}
-        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+        <button onClick={() => deleteTodo(todo)}>Delete</button>
       </td>
     </tr>
   )

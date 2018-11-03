@@ -5,13 +5,11 @@ axios.defaults.baseURL = 'http://localhost:3004';
 // RESTful API
 // CRUD operations
 
-const Api = route => {
-  return {
-    read: () => axios.get(route).then(res => res),
-    create: data => axios.post(route, data).then(res => res),
-    delete: id => axios.delete(`${route}/${id}`).then(res => res),
-    update: (id, data) => axios.put(`${route}/${id}`, data).then(res => res)
-  };
-};
+const Api = route => ({
+  read: () => axios.get(route).then(res => res),
+  create: data => axios.post(route, data).then(res => res),
+  delete: data => axios.delete(`${route}/${data.id}`).then(res => res),
+  update: data => axios.put(`${route}/${data.id}`, data).then(res => res)
+});
 
 export default Api;

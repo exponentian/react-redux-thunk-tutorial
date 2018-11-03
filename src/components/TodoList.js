@@ -44,7 +44,6 @@ class TodoList extends React.Component {
         
         <h2>Todo List</h2>
 
-      
         <form onSubmit={this.addTodo}>
           <div>
             <label>Add a Todo: </label>

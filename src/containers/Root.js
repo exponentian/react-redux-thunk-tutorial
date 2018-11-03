@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 
 import App from './App';
 import { getTodos } from '../actions/todos';
@@ -12,6 +14,7 @@ class Root extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <BrowserRouter>  
         <App />
@@ -19,5 +22,10 @@ class Root extends React.Component {
     );
   }
 }
+
+Root.propTypes = {
+  getTodos: PropTypes.func.isRequired
+};
+
 
 export default connect(null, { getTodos })(Root);

@@ -6,30 +6,33 @@ import PropTypes from 'prop-types';
 class TodoEdit extends React.Component {
 
   state = {
-    id: this.props.data.byId[this.props.match.params.id].id,
-    text: this.props.data.byId[this.props.match.params.id].text
+    todo: this.props.data.byId[this.props.match.params.id]
+    //id: this.props.data.byId[this.props.match.params.id].id,
+    //text: this.props.data.byId[this.props.match.params.id].text
   }
 
   inputTodo = e => {
-    this.setState({ text: e.target.value.trim() });
+    this.setState({ 
+      todo: { ...this.state.todo, text: e.target.value.trim() }
+    });
   }
 
   updateTodo = e => {
     e.preventDefault();
     
-    const { id, text } = this.state;
-    if (id.length > 0 && text.length > 0) this.props.updateTodo(id, text);
+    const { todo } = this.state;
+    if (todo.text.length > 0) this.props.updateTodo(todo);
   }
 
   render() {
-    const { text } = this.state;
+    const { todo } = this.state;
 
     return (
       <div>
         <h2>Edit a Todo</h2>
         
         <form onSubmit={this.updateTodo}>
-          <input name="todo" type="text" defaultValue={text} onChange={this.inputTodo} />
+          <input name="todo" type="text" defaultValue={todo.text} onChange={this.inputTodo} />
           <button type="submit">Update</button>
         </form>
 

@@ -48,7 +48,7 @@ const todos = (state=initialState, action) => {
       return {
         ...state,
         requesting: false,
-        data: filterData( state.data.all.filter(todo => todo.id !== action.id) )
+        data: filterData( state.data.all.filter(todo => todo.id !== action.data.id) )
       };
 
     case 'UPDATE_COMPLETED_SUCCESS':
@@ -73,7 +73,6 @@ const todos = (state=initialState, action) => {
       return {
         ...state,
         requesting: false,
-        success: false,
         error: action.error
       };
 

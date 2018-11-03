@@ -24,20 +24,20 @@ class App extends React.Component {
     });
   }
 
-  deleteTodo = id => {
-    this.props.deleteTodo(id).then(res => {
+  deleteTodo = data => {
+    this.props.deleteTodo(data).then(res => {
       if (res.type === 'DELETE_TODO_SUCCESS') alert(res.type);
     });
   }
 
-  updateCompleted = id => {
-    this.props.updateCompleted(id).then(res => {
+  updateCompleted = data => {
+    this.props.updateCompleted(data).then(res => {
       if (res.type === 'UPDATE_COMPLETED_SUCCESS') alert(res.type);
     });
   }
 
-  updateTodo = (id, text) => {
-    this.props.updateTodo(id, text).then(res => {
+  updateTodo = data => {
+    this.props.updateTodo(data).then(res => {
       if (res.type === 'UPDATE_TODO_SUCCESS') alert(res.type);
     });
   }
@@ -84,7 +84,11 @@ App.propTypes = {
     isFetched: PropTypes.bool.isRequired,
     data: PropTypes.object.isRequired,
     error: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  addTodo: PropTypes.func.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+  updateCompleted: PropTypes.func.isRequired,
+  updateTodo: PropTypes.func.isRequired
 };
 
 export default withRouter( connect(mapStateToProps, { 
